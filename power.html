@@ -1,37 +1,51 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8" />
     <title>power</title>
 </head>
+
 <body>
     <script>
 
+
+        function add(a, b) {
+            return a + b;
+        }
+
+        function multiple(a,b){
+            let d=0;
+            for(let i=0; i<b; i++){
+                d=add(d,a);
+            }
+            return d;
+        }
         
-   function add(a,b){
-    return a+b;
-}
 
-function power(base, tavan) {
+        function power(base, tavan) {
 
-    let result = 1;
-    for(let i = 1; i <= tavan; i++) {
-        let c = result;
-        for(let j=1 ; j<base ; j++)
-            result =add(result,c)
-       
-    }
-    
-    return result
-}
+            let result = 1;
+            for (let i = 1; i <= tavan; i++) {
+              //  let c = result;
+                result=multiple(result,base)
 
-    let zarb = power(5,2);
-    alert(zarb); 
+              /*  for (let j = 1; j < base; j++)
+                    result = add(result, c)*/
 
-   
+            }
+
+            return result
+        }
+
+        let zarb = power(5, 3);
+        alert(zarb);
+
+
 
 
     </script>
-    
+
 </body>
+
 </html>
