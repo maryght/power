@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>power</title>
+</head>
+<body>
+    <script>
+
+        
+   function add(a,b){
+    return a+b;
+}
+
+function power(base, tavan) {
+
+    let result = 1;
+    for(let i = 1; i <= tavan; i++) {
+        let c = result;
+        for(let j=1 ; j<base ; j++)
+            result =add(result,c)
+       
+    }
+    
+    return result
+}
+
+    let zarb = power(5,2);
+    alert(zarb); 
+
+   
+
+
+    </script>
+    
+</body>
+</html>
